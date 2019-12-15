@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditAvailableTime"
+    android:background="@color/white">
+
+    <RelativeLayout
+
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/text1"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Add new available time"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="@color/black" />
+
+        <View
+            android:id="@+id/devider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/text1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/devider3"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Day of week :"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/dayOfWeek"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/devider3"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@id/text2"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:popupBackground="@color/beige"
+            android:textColor="@color/white"></Spinner>
+
+        <TextView
+            android:id="@+id/text3"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dayOfWeek"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text="From time :"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/text3"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/text3"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="click to select start time"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text3"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:text="To time :"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/text4"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/text4"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="click to select end time"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btnAddTime"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="#ffbb6d"
+            android:layout_below="@id/text4"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Add Available Time"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/devider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/btnAddTime"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/black" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/noTimeIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No time set"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/body"
+        android:id="@+id/availableTimeRV"
+        android:visibility="invisible">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>

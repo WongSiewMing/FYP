@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_margin="5dp"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    cardview:cardCornerRadius="10dp"
+    android:id="@+id/userActivityCardView">
+
+    <ProgressBar
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:id="@+id/userActProgressbar"/>
+
+    <RelativeLayout
+        android:id="@+id/activityHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/posterPhoto"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@mipmap/icon_student" />
+
+        <TextView
+            android:id="@+id/posterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/posterPhoto"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="User name"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/posterDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/posterName"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/posterPhoto"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Post date"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/btnviewStuff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/posterPhoto"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="View Stuff"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/posterCaption"
+            android:layout_width="292dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/posterPhoto"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="29dp"
+            android:layout_marginRight="29dp"
+            android:textColor="@color/black"
+            android:layout_toStartOf="@+id/btnviewStuff"
+            android:layout_toLeftOf="@id/btnviewStuff"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Post caption"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/posterThumbnail"
+            android:layout_width="280dp"
+            android:layout_height="180dp"
+            android:layout_below="@+id/posterCaption"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/likeButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/posterThumbnail"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_like" />
+
+        <ImageView
+            android:id="@+id/commentButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/posterThumbnail"
+            android:layout_marginStart="97dp"
+            android:layout_toEndOf="@+id/likeButton"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_comment" />
+
+        <TextView
+            android:id="@+id/likeConditon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/posterThumbnail"
+            android:layout_toEndOf="@id/commentButton"
+            android:text="likeOrNot"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/bookmarkButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/posterThumbnail"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_booking"
+            android:tint="@color/lightgrey"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/likeAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/likeButton"
+            android:ellipsize="end"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:text="like amount"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/commentAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/likeButton"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/likeAmount"
+            android:ellipsize="end"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:text="comment amount"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/shareButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/posterThumbnail"
+            android:layout_marginStart="97dp"
+            android:layout_toEndOf="@+id/commentButton"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="visible"
+            cardview:srcCompat="?attr/actionModeShareDrawable" />
+
+
+    </RelativeLayout>
+
+
+
+
+</android.support.v7.widget.CardView>
