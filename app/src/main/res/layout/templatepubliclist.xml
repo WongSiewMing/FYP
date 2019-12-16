@@ -21,7 +21,7 @@
 
         <TextView
             android:text="General Discussion"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="150dp"
             android:layout_marginRight="60dp"
             android:textColor="@color/black"
             android:layout_width="100dp"

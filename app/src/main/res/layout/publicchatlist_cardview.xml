@@ -16,18 +16,18 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="5dp"
             android:layout_marginTop="5dp"/>
-        
+
         <TextView
             android:id="@+id/roomSubject"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/roomPhoto"
             android:maxLength="30"
             android:text="room subject"
             android:textColor="@color/black"
-            android:layout_toEndOf="@+id/roomPhoto"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="5dp"
-            android:textStyle="italic"/>
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/participationStatus"
